@@ -1,0 +1,15 @@
+Return exactly 3 candidates for the fixed-count ablation.
+Make candidates distinct from one another.
+Each candidate must contain x_chem, x_T, x_S, x_MPR, x_R, rationale, evidence_references, search_role, expected_effects, tradeoffs, and uncertainty.
+Candidate values must already satisfy their declared type and bounds.
+The candidates will seed a numerical optimizer under the same fixed simulator budget.
+Use only the supplied source reference design and its evaluated result as evidence for proposing target-condition initial points.
+rationale must be non-empty and concise.
+evidence_references must identify supplied record or changed-condition fields motivating the test.
+search_role must state how the candidate contributes to the ordered initialization set.
+evidence_references, expected_effects, tradeoffs, and uncertainty are always JSON arrays of non-empty strings.
+uncertainty is always a JSON array, never a string.
+Candidates must be distinct in the five design variables x_chem, x_T, x_S, x_MPR, and x_R.
+Candidate values must satisfy chemistry-dependent bounds before simulator use.
+Do not assert unobserved causal or directional effects; candidate effects remain unknown until BatPaC evaluation.
+Use x_T units as micrometers and do not describe x_T as capacity.

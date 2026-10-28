@@ -1,0 +1,91 @@
+{
+  "type": "json_schema",
+  "json_schema": {
+    "name": "WarmStartOutput",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "warm_start_count",
+        "allocation_rationale",
+        "candidates"
+      ],
+      "properties": {
+        "warm_start_count": {
+          "type": "integer"
+        },
+        "allocation_rationale": {
+          "type": "string"
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "x_chem",
+              "x_T",
+              "x_S",
+              "x_MPR",
+              "x_R",
+              "rationale",
+              "evidence_references",
+              "search_role",
+              "expected_effects",
+              "tradeoffs",
+              "uncertainty"
+            ],
+            "properties": {
+              "x_chem": {
+                "type": "string"
+              },
+              "x_T": {
+                "type": "number"
+              },
+              "x_S": {
+                "type": "integer"
+              },
+              "x_MPR": {
+                "type": "integer"
+              },
+              "x_R": {
+                "type": "integer"
+              },
+              "rationale": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "search_role": {
+                "type": "string"
+              },
+              "expected_effects": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "tradeoffs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "uncertainty": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "strict": true
+  }
+}

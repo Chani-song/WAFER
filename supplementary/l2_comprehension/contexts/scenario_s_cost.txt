@@ -1,0 +1,13 @@
+TARGET REDESIGN SCENARIO:
+
+- NMC811 cathode-active-material price increases from 19.63 to 25.75 USD/kg.
+- LFP cathode-material price is unchanged.
+- The physical feasibility constraints are unchanged.
+
+ACTUAL OPTIMIZATION VARIABLES:
+
+x_chem = cathode chemistry {LFP, NMC811}
+x_T    = positive-electrode thickness
+x_S    = series-cell/topology variable
+x_MPR  = modules per row
+x_R    = number of module rows

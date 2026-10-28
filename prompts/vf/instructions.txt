@@ -1,0 +1,18 @@
+Decide whether each design variable should be fixed at its source-reference value or remain free under the changed target condition.
+Assess all five variables individually using the source reference design, the stated condition change, and any provided semantic reference information.
+Variable fixing is intended to reduce the dimension of the downstream optimization problem so that a limited evaluation budget can be used more efficiently, while retaining sufficient redesign flexibility to adapt to the target condition.
+Assess all five variables individually. For each variable, consider whether retaining its source-reference value is appropriate under the target condition and whether allowing the variable to change could be useful for redesign.
+Consider fixing a variable when the available information supports reusing its source-reference value under the target condition.
+Keep a variable free when the available information supports exploring alternative values under the target condition.
+When the available information is mixed or indirect, weigh the benefit of reducing the downstream search space against the value of retaining redesign flexibility rather than defaulting automatically to either fixing or freeing the variable.
+Any partition is allowed, including all-free, provided that at least one variable remains free. Every fixed value must exactly equal the corresponding source reference value.
+The only valid values for each assessment's "decision" field are exactly the lowercase strings "fix" and "free".
+The only valid values for each assessment's "confidence" field are exactly the lowercase strings "low", "medium", and "high".
+Do not use, infer, mention, or reconstruct the hidden target optimum.
+Do not claim unobserved target-condition BatPaC results.
+Return concise explicit decision justifications rather than an unrestricted reasoning transcript.
+Return exactly one complete JSON object with fields in this order: free_variables, fixed_variables, variable_assessments, rationale, warnings.
+"free_variables" and "fixed_variables" must be a disjoint, exhaustive partition of x_chem, x_T, x_S, x_MPR, x_R.
+"rationale" must summarize the overall partition in one or two concise sentences of at most 80 words.
+"warnings" must be [] unless a concrete unresolved issue should be recorded.
+"variable_assessments" must be a JSON list with exactly one object for each variable. Each object must include variable, source_value, decision, justification, and confidence. decision must agree with the final partition.

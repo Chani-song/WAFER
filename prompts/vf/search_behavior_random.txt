@@ -1,0 +1,1 @@
+Independent uniform random sampling after any supplied initial candidates.

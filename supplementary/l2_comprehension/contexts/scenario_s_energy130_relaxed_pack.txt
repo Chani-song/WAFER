@@ -1,0 +1,15 @@
+TARGET REDESIGN SCENARIO:
+
+- Required pack energy increases from 84 kWh to 130 kWh.
+- Maximum pack length increases from 2200 mm to 2700 mm.
+- Maximum pack width increases from 1500 mm to 1650 mm.
+- Required power remains 239 kW.
+- Cell-capacity constraint remains 40 to 120 Ah.
+
+ACTUAL OPTIMIZATION VARIABLES:
+
+x_chem = cathode chemistry {LFP, NMC811}
+x_T    = positive-electrode thickness
+x_S    = series-cell/topology variable
+x_MPR  = modules per row
+x_R    = number of module rows

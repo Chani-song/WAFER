@@ -1,0 +1,3 @@
+# wafer/
+
+The experiments ran from four copies of the code, one per role: `wsvf_general` for WS, VF and the numerical baselines in S1, S2 and S4, `wsvf_fastcharge` for the same methods in S3, `react_general` for ReAct in S1, S2 and S4, and `react_fastcharge` for ReAct in S3. The files shared by all roles are in `common/` and the files of each role in `roles/<role>/`. `python -m wafer.assemble --out DIR [--batpac-workbook FILE]` builds the four trees for each model size in `DIR/code/`, the scenario context files in `DIR/contexts/` and the launch scripts of `orchestration/` in `DIR/scripts/`, and `scripts/run_one.sh` runs one configuration from them with only its own tree on `PYTHONPATH`.

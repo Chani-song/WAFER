@@ -1,0 +1,1 @@
+Return only the schema keys; no concrete candidate example is supplied.

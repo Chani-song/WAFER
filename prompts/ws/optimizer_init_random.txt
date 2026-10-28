@@ -1,0 +1,1 @@
+Candidates are evaluated first; remaining budget uses the optimizer's ordinary random sampling.

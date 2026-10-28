@@ -1,0 +1,113 @@
+{
+  "type": "json_schema",
+  "json_schema": {
+    "name": "VariableFixingOutput",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "free_variables",
+        "fixed_variables",
+        "variable_assessments",
+        "rationale",
+        "warnings"
+      ],
+      "properties": {
+        "free_variables": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "x_chem",
+              "x_T",
+              "x_S",
+              "x_MPR",
+              "x_R"
+            ]
+          }
+        },
+        "fixed_variables": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "x_chem": {
+              "type": "string"
+            },
+            "x_T": {
+              "type": "number"
+            },
+            "x_S": {
+              "type": "integer"
+            },
+            "x_MPR": {
+              "type": "integer"
+            },
+            "x_R": {
+              "type": "integer"
+            }
+          }
+        },
+        "variable_assessments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "variable",
+              "source_value",
+              "decision",
+              "justification",
+              "confidence"
+            ],
+            "properties": {
+              "variable": {
+                "enum": [
+                  "x_chem",
+                  "x_T",
+                  "x_S",
+                  "x_MPR",
+                  "x_R"
+                ]
+              },
+              "source_value": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  }
+                ]
+              },
+              "decision": {
+                "enum": [
+                  "fix",
+                  "free"
+                ]
+              },
+              "justification": {
+                "type": "string"
+              },
+              "confidence": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              }
+            }
+          }
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "strict": true
+  }
+}

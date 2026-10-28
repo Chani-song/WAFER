@@ -1,0 +1,13 @@
+TARGET REDESIGN SCENARIO:
+
+- Requested recharge time decreases from 90 minutes to 30 minutes.
+- BatPaC evaluates a candidate-specific maximum allowable positive-electrode thickness.
+- The internal BatPaC charging-limit formula is NOT supplied to the model.
+
+ACTUAL OPTIMIZATION VARIABLES:
+
+x_chem = cathode chemistry {LFP, NMC811}
+x_T    = positive-electrode thickness
+x_S    = series-cell/topology variable
+x_MPR  = modules per row
+x_R    = number of module rows

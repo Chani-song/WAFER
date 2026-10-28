@@ -1,0 +1,1 @@
+Candidates are registered as initial observations before model-based proposals.

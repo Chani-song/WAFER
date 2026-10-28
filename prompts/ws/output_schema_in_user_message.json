@@ -1,0 +1,101 @@
+{
+  "additionalProperties": false,
+  "invariant": "candidates array length must equal warm_start_count",
+  "name": "WarmStartOutput",
+  "properties": {
+    "allocation_rationale": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "candidates": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "evidence_references": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "expected_effects": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "rationale": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "search_role": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "tradeoffs": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "uncertainty": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "x_MPR": {
+            "type": "integer"
+          },
+          "x_R": {
+            "type": "integer"
+          },
+          "x_S": {
+            "type": "integer"
+          },
+          "x_T": {
+            "type": "number"
+          },
+          "x_chem": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "x_chem",
+          "x_T",
+          "x_S",
+          "x_MPR",
+          "x_R",
+          "rationale",
+          "evidence_references",
+          "search_role",
+          "expected_effects",
+          "tradeoffs",
+          "uncertainty"
+        ],
+        "type": "object"
+      },
+      "maxItems": 3,
+      "minItems": 3,
+      "type": "array"
+    },
+    "warm_start_count": {
+      "maximum": 3,
+      "minimum": 3,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "warm_start_count",
+    "allocation_rationale",
+    "candidates"
+  ],
+  "type": "object"
+}

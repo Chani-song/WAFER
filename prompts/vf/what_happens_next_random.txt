@@ -1,0 +1,6 @@
+A free variable remains in the downstream optimizer search space and may receive new values according to that optimizer's initialization and proposal rules.
+Because the downstream optimizer is random search, each free variable is sampled randomly within its valid bounds for every proposed candidate.
+Every fixed variable is removed from that search space and held at the source-reference value for every downstream BatPaC evaluation.
+Variable fixing itself consumes no BatPaC evaluation.
+Fixing variables reduces the search dimension and can make a limited-budget search more sample-efficient. It does not reduce the runtime of an individual BatPaC evaluation.
+A fixed variable cannot take alternative values in the downstream search, so the partition should balance dimensionality reduction and redesign flexibility.

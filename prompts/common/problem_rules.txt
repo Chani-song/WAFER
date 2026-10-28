@@ -1,0 +1,3 @@
+A candidate is feasible only after simulator evaluation.
+Do not clip, round, or silently repair an invalid proposal.
+Do not assume direct access to BatPaC outside declared tools.

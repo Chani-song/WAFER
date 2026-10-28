@@ -1,0 +1,13 @@
+scenario,rep,model,checkpoint,temperature,top_p,max_completion_tokens,file,bytes,chars,lines
+s_cost,1,Qwen3.5-4B,mlx-community/Qwen3.5-4B-MLX-4bit,0.7,0.8,3500,responses/s_cost_rep1.md,10277,10269,123
+s_cost,2,Qwen3.5-4B,mlx-community/Qwen3.5-4B-MLX-4bit,0.7,0.8,3500,responses/s_cost_rep2.md,11265,11255,118
+s_cost,3,Qwen3.5-4B,mlx-community/Qwen3.5-4B-MLX-4bit,0.7,0.8,3500,responses/s_cost_rep3.md,11731,11721,109
+s_space,1,Qwen3.5-4B,mlx-community/Qwen3.5-4B-MLX-4bit,0.7,0.8,3500,responses/s_space_rep1.md,12537,12529,139
+s_space,2,Qwen3.5-4B,mlx-community/Qwen3.5-4B-MLX-4bit,0.7,0.8,3500,responses/s_space_rep2.md,10876,10868,118
+s_space,3,Qwen3.5-4B,mlx-community/Qwen3.5-4B-MLX-4bit,0.7,0.8,3500,responses/s_space_rep3.md,13172,13164,122
+s_fastcharge,1,Qwen3.5-4B,mlx-community/Qwen3.5-4B-MLX-4bit,0.7,0.8,3500,responses/s_fastcharge_rep1.md,11009,11001,118
+s_fastcharge,2,Qwen3.5-4B,mlx-community/Qwen3.5-4B-MLX-4bit,0.7,0.8,3500,responses/s_fastcharge_rep2.md,13619,13609,176
+s_fastcharge,3,Qwen3.5-4B,mlx-community/Qwen3.5-4B-MLX-4bit,0.7,0.8,3500,responses/s_fastcharge_rep3.md,11331,11323,130
+s_energy130_relaxed_pack,1,Qwen3.5-4B,mlx-community/Qwen3.5-4B-MLX-4bit,0.7,0.8,3500,responses/s_energy130_relaxed_pack_rep1.md,10938,10930,128
+s_energy130_relaxed_pack,2,Qwen3.5-4B,mlx-community/Qwen3.5-4B-MLX-4bit,0.7,0.8,3500,responses/s_energy130_relaxed_pack_rep2.md,12718,12708,134
+s_energy130_relaxed_pack,3,Qwen3.5-4B,mlx-community/Qwen3.5-4B-MLX-4bit,0.7,0.8,3500,responses/s_energy130_relaxed_pack_rep3.md,10937,10929,131

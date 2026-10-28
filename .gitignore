@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+.ipynb_checkpoints/
+paper_outputs/
+tables/out/
+figures/outputs/
+runs/
+*.egg-info/
+build/
+dist/
+
+# Figs. 1 and 2 of the paper are drawn by hand and are not included.
+261003_fig1.pdf
+260930_fig1.pdf
+260918_fig2.pdf

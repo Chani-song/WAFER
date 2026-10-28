@@ -1,0 +1,48 @@
+{
+  "name": "VariableFixingOutput",
+  "required": [
+    "free_variables",
+    "fixed_variables",
+    "variable_assessments",
+    "rationale",
+    "warnings"
+  ],
+  "field_order": [
+    "free_variables",
+    "fixed_variables",
+    "variable_assessments",
+    "rationale",
+    "warnings"
+  ],
+  "semantics": {
+    "free_variables": "variable names retained in the downstream optimizer search space",
+    "fixed_variables": "source-incumbent values removed from the downstream optimizer search space",
+    "variable_assessments": "one concise fix-or-free decision for each design variable"
+  },
+  "free_variables": "list of remaining allowed keys; disjoint from fixed_variables and exhaustive with it",
+  "fixed_variables": "object with allowed keys x_chem, x_T, x_S, x_MPR, x_R; every value must equal the source incumbent",
+  "variable_assessments": {
+    "type": "array",
+    "exact_variables": [
+      "x_chem",
+      "x_T",
+      "x_S",
+      "x_MPR",
+      "x_R"
+    ],
+    "required_fields": [
+      "variable",
+      "source_value",
+      "decision",
+      "justification",
+      "confidence"
+    ],
+    "decision_enum": [
+      "fix",
+      "free"
+    ]
+  },
+  "invariant": "fixed keys union free names equals x_chem, x_T, x_S, x_MPR, x_R; intersection is empty; len(free_variables) >= 1; fixed values equal source values",
+  "partition_rule": "all-fixed is invalid; at least one variable must be free",
+  "warnings": "list of concrete uncertainty strings; use [] when there is no concrete uncertainty"
+}

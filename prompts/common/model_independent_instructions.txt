@@ -1,0 +1,2 @@
+Use the same context contract for every LLM backbone.
+Validate outputs without clipping before simulator use.

@@ -1,0 +1,99 @@
+BatPaC redesign engineering reference.
+
+Use the relationships below to form testable hypotheses. They do not replace BatPaC evaluation and they do not establish the outcome of an unevaluated candidate.
+
+1. Battery hierarchy
+
+BatPaC represents a battery system through the hierarchy:
+
+electrode layers -> stiff pouch cell -> module -> row of modules -> pack
+
+A cell contains positive and negative electrodes, current collectors, separator, electrolyte, and tabs. A module contains multiple cells, electrical interconnects, thermal conductors, terminals, control hardware, and an enclosure. Cells in a module may be connected in series or parallel. A row rack contains multiple modules, interconnects, cooling panels, and structural supports. A pack contains one or more module rows together with bus bars, terminals, coolant hardware, a protective jacket, battery-management components, and thermal-management components.
+
+A change in cell geometry can therefore propagate to module geometry, pack dimensions, component quantities, and cost.
+
+2. Chemistry
+
+LFP uses lithium iron phosphate, LiFePO4, as the cathode active material. NMC811 uses approximately LiNi0.8Mn0.1Co0.1O2 as the cathode active material.
+
+The selected BatPaC chemistry determines or influences open-circuit voltage, active-material specific capacity and density, electrode composition and porosity, area-specific-impedance parameters, allowable electrode-thickness range, and material price.
+
+In the configured BatPaC data, NMC811 provides higher voltage and cathode specific capacity than LFP. LFP has lower cathode-material price under the source condition. Power and fast-charge capability must be judged from the configured BatPaC impedance and complete cell design rather than from the chemistry label alone.
+
+Changing chemistry can affect energy, power, charging capability, cell capacity, cell dimensions, pack dimensions, and cost simultaneously.
+
+3. Energy, capacity, area, and thickness
+
+A simple energy relationship is:
+
+E approximately equals V times C
+
+where E is energy, V is average voltage, and C is capacity.
+
+A simplified positive-electrode capacity relationship is:
+
+C_cell = Q times rho times epsilon_active times A_pos times delta_pos
+
+where Q is active-material specific capacity, rho is active-material density, epsilon_active is active-material volume fraction, A_pos is positive-electrode area, and delta_pos is positive-electrode thickness.
+
+Increasing cathode thickness increases active-material capacity per unit electrode area. For a fixed energy requirement, this can reduce the required electrode area and the associated separator and current-collector area. However, electrode thickness also affects transport and rate capability. The final effects on cost, cell dimensions, pack dimensions, power, and charging capability are coupled and must be evaluated by BatPaC.
+
+4. Power, voltage, current, and impedance
+
+Basic electrical relationships are:
+
+P = V times I
+V_loss = I times R
+P_loss = I squared times R
+
+For a fixed power requirement, increasing pack voltage permits lower current.
+
+BatPaC relates rated power to cell count, positive-electrode area, current density, open-circuit voltage, operating voltage fraction, and area-specific impedance. A compact interpretation is:
+
+I_power is proportional to U times (1 - V/U) divided by ASI
+
+Area-specific impedance depends on chemistry, cathode thickness, electrode area, current density, state of charge, pulse duration, and temperature.
+
+A thicker electrode can store more active material per unit area, but its longer transport path may increase impedance and reduce high-rate capability. A thinner electrode can shorten transport paths and support high-rate operation, but it may require more electrode, separator, and current-collector area to meet the same energy requirement. These are hypotheses, not guaranteed monotonic rules.
+
+5. Fast charging
+
+BatPaC treats requested charging time as a cell-design requirement. A shorter requested charging time can make the candidate-specific maximum allowable positive-electrode thickness more restrictive.
+
+Electrode thickness is coupled with transport distance, impedance, chemistry, thermal behavior, energy requirement, electrode area, cell geometry, and pack geometry. A thinner electrode can support higher-rate operation but may require additional electrode area and inactive materials to meet the same energy requirement. These relationships are engineering mechanisms, not monotonic design rules.
+
+Do not infer the numerical fast-charge thickness limit of an unevaluated design. BatPaC evaluation is authoritative for the charging constraint and feasibility.
+
+6. Series and parallel configuration
+
+For a simple series connection:
+
+V_series approximately equals N_series times V_cell
+
+For a simple parallel connection:
+
+C_parallel approximately equals N_parallel times C_cell
+
+Increasing the number of cells connected in series tends to increase voltage. At fixed power, higher voltage tends to reduce current according to I = P/V. The complete BatPaC configuration also includes cell, module, and pack series-parallel assignments and divisibility constraints, so configuration changes can affect voltage, capacity, interconnects, geometry, and feasibility together.
+
+7. Modules, rows, and packaging
+
+The pack dimensions are coupled functions of calculated cell dimensions, cells per module, modules per row, number of module rows, module enclosures, cooling panels and tubing, bus bars, interconnect clearances, structural supports, and the pack jacket.
+
+Changing x_MPR or x_R rearranges the modules within the pack. Its effects on pack length and width are not universally monotonic. Row count can also change bus-bar routing and clearance requirements. BatPaC must evaluate the resulting geometry.
+
+8. Cost
+
+Pack cost includes active and inactive cell materials, purchased components, module and pack hardware, battery-management components, thermal-management components, and manufacturing costs.
+
+A chemistry-specific cathode-material price change directly changes the material-cost contribution of designs using that chemistry. A material-price change alone does not make an otherwise unchanged design physically infeasible.
+
+Cathode thickness and pack topology can change cost through active-material quantity, electrode area, separator and current-collector area, cell count, module hardware, pack structure, and manufacturing requirements.
+
+A fast-charge requirement may indirectly change cost when satisfying the charging constraint requires changes in electrode thickness, electrode area, cell design, or pack configuration.
+
+Compare cost only among feasible BatPaC evaluations.
+
+9. Interpretation boundary
+
+The relationships above support engineering hypotheses but are not guaranteed design rules. Do not state an unevaluated candidate's objective value, feasibility, charging limit, or constraint values as facts. BatPaC evaluation is authoritative.

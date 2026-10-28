@@ -1,0 +1,179 @@
+{
+  "context": {
+    "changed_condition": {
+      "E_req": 84.0,
+      "L_max": 2200.0,
+      "P_req": 239.0,
+      "V_max": 1000.0,
+      "V_min": 200.0,
+      "W_max": 1500.0,
+      "c_max": 120.0,
+      "c_min": 40.0,
+      "calculate_charging_requirements": true,
+      "cam_cost_lfp": 8.7,
+      "cam_cost_nmc811": 19.63,
+      "charge_time_min": 30.0,
+      "condition_profile_version": "ioniq5_84kwh_2026-07-11",
+      "name": "s_fastcharge",
+      "source_charge_time_min": 90.0
+    },
+    "constraints": [
+      {
+        "metric": "P",
+        "name": "P_min",
+        "operator": ">=",
+        "value": 239.0
+      },
+      {
+        "metric": "E",
+        "name": "E_min",
+        "operator": ">=",
+        "value": 84.0
+      },
+      {
+        "metric": "V",
+        "name": "V_min",
+        "operator": ">=",
+        "value": 200.0
+      },
+      {
+        "metric": "V",
+        "name": "V_max",
+        "operator": "<=",
+        "value": 1000.0
+      },
+      {
+        "metric": "c",
+        "name": "c_min",
+        "operator": ">=",
+        "value": 40.0
+      },
+      {
+        "metric": "c",
+        "name": "c_max",
+        "operator": "<=",
+        "value": 120.0
+      },
+      {
+        "metric": "L_bat",
+        "name": "L_bat_max",
+        "operator": "<=",
+        "value": 2200.0
+      },
+      {
+        "metric": "W_bat",
+        "name": "W_bat_max",
+        "operator": "<=",
+        "value": 1500.0
+      },
+      {
+        "description": "Cathode thickness must not exceed the candidate-specific BatPaC fast-charge thickness limit, subject to the chemistry-dependent minimum-thickness floor. The numerical limit is established only by BatPaC evaluation.",
+        "metric": "x_T",
+        "name": "fastcharge_thickness_max",
+        "operator": "<=",
+        "value": "candidate-specific BatPaC fast-charge thickness limit"
+      }
+    ],
+    "design_variable_bounds_override": null,
+    "objective": {
+      "description": "Minimize BatPaC cost_per_kWh while satisfying all constraints.",
+      "direction": "minimize",
+      "name": "cost_per_kWh"
+    },
+    "previous_best_design": {
+      "x_MPR": 2,
+      "x_R": 4,
+      "x_S": 29,
+      "x_T": 155.0,
+      "x_chem": "NMC811"
+    },
+    "previous_best_reevaluated_under_changed_condition": {
+      "Chem_C27_min_um": 15.0,
+      "E": 84.0,
+      "G269_override_um": 155.0,
+      "G276_selected_um": 155.0,
+      "L_bat": 1264.4,
+      "P": 239.0,
+      "V": 201.801471037397,
+      "W_bat": 1397.12168,
+      "c": 104.062670564519,
+      "cost": 96.5230814354139,
+      "cost_per_kWh": 96.5230814354139,
+      "feasible": false,
+      "success": true
+    },
+    "previous_best_result": {
+      "E": 84.0,
+      "L_bat": 1264.4,
+      "P": 239.0,
+      "V": 201.801471037397,
+      "W_bat": 1397.12168,
+      "c": 104.062670564519,
+      "cost": 96.5230814354139,
+      "cost_per_kWh": 96.5230814354139,
+      "success": true
+    },
+    "previous_condition": {
+      "E_req": 84.0,
+      "L_max": 2200.0,
+      "P_req": 239.0,
+      "V_max": 1000.0,
+      "V_min": 200.0,
+      "W_max": 1500.0,
+      "c_max": 120.0,
+      "c_min": 40.0,
+      "cam_cost_lfp": 8.7,
+      "cam_cost_nmc811": 19.63,
+      "condition_profile_version": "ioniq5_84kwh_2026-07-11",
+      "name": "s0"
+    },
+    "previous_optimization_history": [],
+    "structured_condition_changes": [
+      {
+        "changed": 30.0,
+        "description": "Required charging time decreases from 90.0 to 30.0 minutes.",
+        "direction": "decreases",
+        "field": "charge_time_min",
+        "previous": 90.0
+      }
+    ],
+    "variable_bounds": {
+      "x_MPR": {
+        "lower": 1,
+        "type": "integer",
+        "upper": 50
+      },
+      "x_R": {
+        "lower": 1,
+        "type": "integer",
+        "upper": 4
+      },
+      "x_S": {
+        "lower": 1,
+        "type": "integer",
+        "upper": 30
+      },
+      "x_T": {
+        "bounds_by_chemistry": {
+          "LFP": {
+            "lower": 50.0,
+            "upper": 165.0
+          },
+          "NMC811": {
+            "lower": 50.0,
+            "upper": 155.0
+          }
+        },
+        "type": "real"
+      },
+      "x_chem": {
+        "choices": [
+          "LFP",
+          "NMC811"
+        ],
+        "type": "categorical"
+      }
+    }
+  },
+  "schema_version": "llm_methods.redesign_context.v1"
+}

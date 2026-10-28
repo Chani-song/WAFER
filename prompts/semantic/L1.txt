@@ -1,0 +1,22 @@
+BatPaC redesign definitions.
+
+Design variables
+- x_chem: Cathode chemistry [categorical: LFP or NMC811]
+- x_T: Cathode thickness [micrometers]
+- x_S: Number of cells connected in series per module [cells/module]
+- x_MPR: Number of modules per row [modules/row]
+- x_R: Number of module rows per pack [rows/pack]
+
+Objective
+- cost_per_kWh: Battery-pack cost per unit energy [USD/kWh]
+- Objective: Minimize cost_per_kWh.
+
+Constraints and evaluated outputs
+- energy_kWh: Battery-system energy [kWh]
+- power_kW: Battery-system rated power [kW]
+- nominal_voltage_V: Battery-system nominal voltage [V]
+- cell_capacity_Ah: Cell capacity [Ah]
+- pack_length_mm: Main battery-pack length [mm]
+- pack_width_mm: Main battery-pack width [mm]
+
+A design is feasible only when its BatPaC evaluation satisfies every numerical constraint supplied in the problem definition.

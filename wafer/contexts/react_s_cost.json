@@ -1,0 +1,611 @@
+{
+  "context": {
+    "changed_condition": {
+      "E_req": 84.0,
+      "L_max": 2200.0,
+      "P_req": 239.0,
+      "V_max": 1000.0,
+      "V_min": 200.0,
+      "W_max": 1500.0,
+      "c_max": 120.0,
+      "c_min": 40.0,
+      "cam_cost_lfp": 8.7,
+      "cam_cost_nmc811": 25.75,
+      "condition_profile_version": "ioniq5_84kwh_2026-07-11",
+      "name": "s_cost"
+    },
+    "constraints": [
+      {
+        "metric": "P",
+        "name": "P_min",
+        "operator": ">=",
+        "value": 239.0
+      },
+      {
+        "metric": "E",
+        "name": "E_min",
+        "operator": ">=",
+        "value": 84.0
+      },
+      {
+        "metric": "V",
+        "name": "V_min",
+        "operator": ">=",
+        "value": 200.0
+      },
+      {
+        "metric": "V",
+        "name": "V_max",
+        "operator": "<=",
+        "value": 1000.0
+      },
+      {
+        "metric": "c",
+        "name": "c_min",
+        "operator": ">=",
+        "value": 40.0
+      },
+      {
+        "metric": "c",
+        "name": "c_max",
+        "operator": "<=",
+        "value": 120.0
+      },
+      {
+        "metric": "L_bat",
+        "name": "L_bat_max",
+        "operator": "<=",
+        "value": 2200.0
+      },
+      {
+        "metric": "W_bat",
+        "name": "W_bat_max",
+        "operator": "<=",
+        "value": 1500.0
+      }
+    ],
+    "objective": {
+      "description": "Minimize BatPaC cost_per_kWh while satisfying all constraints.",
+      "direction": "minimize",
+      "name": "cost_per_kWh"
+    },
+    "previous_best_design": {
+      "x_MPR": 2,
+      "x_R": 4,
+      "x_S": 29,
+      "x_T": 155.0,
+      "x_chem": "NMC811"
+    },
+    "previous_best_reevaluated_under_changed_condition": {
+      "E": 84.0,
+      "L_bat": 1264.4,
+      "P": 239.0,
+      "V": 201.801471037397,
+      "W_bat": 1397.12168023839,
+      "c": 104.062670564519,
+      "cost": 106.732312784183,
+      "cost_per_kwh": 106.732312784183,
+      "feasible": true,
+      "raw": {
+        "condition_name": "cost_84_239_cobalt4x_long",
+        "design_id": "NMC811_T155p0_S29_MPR2_R4",
+        "grid_path": "<jmd-workspace>/outputs_mcp/grid_search/grid3_staged_20260723_190733/stage1_core_16h/cost/raw_vehicle_grid.csv",
+        "row_number": 3873,
+        "runtime_sec": 4.929424722678959
+      },
+      "success": true,
+      "total_pack_cost": 8805.75841035845
+    },
+    "previous_best_result": {
+      "E": 84.0,
+      "L_bat": 1264.4,
+      "P": 239.0,
+      "V": 201.801471037397,
+      "W_bat": 1397.12168023839,
+      "c": 104.062670564519,
+      "cost": 96.5230814354139,
+      "cost_per_kwh": 96.5230814354139,
+      "raw": {
+        "condition_name": "cost_84_239_base_long",
+        "design_id": "NMC811_T155p0_S29_MPR2_R4",
+        "grid_path": "<jmd-workspace>/outputs_mcp/grid_search/grid3_staged_20260723_190733/stage1_core_16h/cost/raw_vehicle_grid.csv",
+        "row_number": 3872,
+        "runtime_sec": 4.943174415268004
+      },
+      "success": true,
+      "total_pack_cost": 7963.46405293641
+    },
+    "previous_condition": {
+      "E_req": 84.0,
+      "L_max": 2200.0,
+      "P_req": 239.0,
+      "V_max": 1000.0,
+      "V_min": 200.0,
+      "W_max": 1500.0,
+      "c_max": 120.0,
+      "c_min": 40.0,
+      "cam_cost_lfp": 8.7,
+      "cam_cost_nmc811": 19.63,
+      "condition_profile_version": "ioniq5_84kwh_2026-07-11",
+      "name": "s0"
+    },
+    "previous_optimization_history": [
+      {
+        "candidate": {
+          "x_MPR": 4,
+          "x_R": 4,
+          "x_S": 24,
+          "x_T": 100.0,
+          "x_chem": "LFP"
+        },
+        "design_id": "LFP_T100p0_S24_MPR4_R4",
+        "event_type": "feasible_incumbent_update",
+        "iteration": 0,
+        "optimization_method": "deterministic_exhaustive_grid_search",
+        "result": {
+          "E": 84.0,
+          "L_bat": 2042.8,
+          "P": 239.0,
+          "V": 309.66194848736,
+          "W_bat": 1370.3766220775,
+          "c": 67.8158879467788,
+          "cost": 109.049574281107,
+          "cost_per_kwh": 109.049574281107,
+          "raw": {
+            "condition_name": "cost_84_239_base_long",
+            "design_id": "LFP_T100p0_S24_MPR4_R4",
+            "grid_path": "<jmd-workspace>/outputs_mcp/grid_search/grid3_staged_20260723_190733/stage1_core_16h/cost/raw_vehicle_grid.csv",
+            "row_number": 14,
+            "runtime_sec": 4.899528191424906
+          },
+          "success": true,
+          "total_pack_cost": 9098.30837164144
+        },
+        "source_row_number": 14
+      },
+      {
+        "candidate": {
+          "x_MPR": 4,
+          "x_R": 3,
+          "x_S": 24,
+          "x_T": 100.0,
+          "x_chem": "LFP"
+        },
+        "design_id": "LFP_T100p0_S24_MPR4_R3",
+        "event_type": "feasible_incumbent_update",
+        "iteration": 1,
+        "optimization_method": "deterministic_exhaustive_grid_search",
+        "result": {
+          "E": 84.0,
+          "L_bat": 2042.8,
+          "P": 239.0,
+          "V": 232.24646136552,
+          "W_bat": 1156.18427247818,
+          "c": 90.4211839290384,
+          "cost": 106.508891466538,
+          "cost_per_kwh": 106.508891466538,
+          "raw": {
+            "condition_name": "cost_84_239_base_long",
+            "design_id": "LFP_T100p0_S24_MPR4_R3",
+            "grid_path": "<jmd-workspace>/outputs_mcp/grid_search/grid3_staged_20260723_190733/stage1_core_16h/cost/raw_vehicle_grid.csv",
+            "row_number": 17,
+            "runtime_sec": 4.955180045217276
+          },
+          "success": true,
+          "total_pack_cost": 8884.35140874549
+        },
+        "source_row_number": 17
+      },
+      {
+        "candidate": {
+          "x_MPR": 3,
+          "x_R": 4,
+          "x_S": 25,
+          "x_T": 100.0,
+          "x_chem": "LFP"
+        },
+        "design_id": "LFP_T100p0_S25_MPR3_R4",
+        "event_type": "feasible_incumbent_update",
+        "iteration": 2,
+        "optimization_method": "deterministic_exhaustive_grid_search",
+        "result": {
+          "E": 84.0,
+          "L_bat": 1612.8,
+          "P": 239.0,
+          "V": 241.92339725575,
+          "W_bat": 1495.09703579357,
+          "c": 86.8043365718769,
+          "cost": 106.094407290804,
+          "cost_per_kwh": 106.094407290804,
+          "raw": {
+            "condition_name": "cost_84_239_base_long",
+            "design_id": "LFP_T100p0_S25_MPR3_R4",
+            "grid_path": "<jmd-workspace>/outputs_mcp/grid_search/grid3_staged_20260723_190733/stage1_core_16h/cost/raw_vehicle_grid.csv",
+            "row_number": 32,
+            "runtime_sec": 4.8984758434817195
+          },
+          "success": true,
+          "total_pack_cost": 8850.23024732402
+        },
+        "source_row_number": 32
+      },
+      {
+        "candidate": {
+          "x_MPR": 3,
+          "x_R": 3,
+          "x_S": 28,
+          "x_T": 100.0,
+          "x_chem": "LFP"
+        },
+        "design_id": "LFP_T100p0_S28_MPR3_R3",
+        "event_type": "feasible_incumbent_update",
+        "iteration": 3,
+        "optimization_method": "deterministic_exhaustive_grid_search",
+        "result": {
+          "E": 84.0,
+          "L_bat": 1796.4,
+          "P": 239.0,
+          "V": 203.21565369483,
+          "W_bat": 1207.95195897352,
+          "c": 103.338495918901,
+          "cost": 104.53788972251,
+          "cost_per_kwh": 104.53788972251,
+          "raw": {
+            "condition_name": "cost_84_239_base_long",
+            "design_id": "LFP_T100p0_S28_MPR3_R3",
+            "grid_path": "<jmd-workspace>/outputs_mcp/grid_search/grid3_staged_20260723_190733/stage1_core_16h/cost/raw_vehicle_grid.csv",
+            "row_number": 116,
+            "runtime_sec": 4.922017538920045
+          },
+          "success": true,
+          "total_pack_cost": 8718.49808546965
+        },
+        "source_row_number": 116
+      },
+      {
+        "candidate": {
+          "x_MPR": 4,
+          "x_R": 3,
+          "x_S": 24,
+          "x_T": 120.0,
+          "x_chem": "LFP"
+        },
+        "design_id": "LFP_T120p0_S24_MPR4_R3",
+        "event_type": "feasible_incumbent_update",
+        "iteration": 4,
+        "optimization_method": "deterministic_exhaustive_grid_search",
+        "result": {
+          "E": 84.0,
+          "L_bat": 2042.8,
+          "P": 239.0,
+          "V": 232.24646136552,
+          "W_bat": 1146.63878890266,
+          "c": 90.4211839290384,
+          "cost": 103.322276486356,
+          "cost_per_kwh": 103.322276486356,
+          "raw": {
+            "condition_name": "cost_84_239_base_long",
+            "design_id": "LFP_T120p0_S24_MPR4_R3",
+            "grid_path": "<jmd-workspace>/outputs_mcp/grid_search/grid3_staged_20260723_190733/stage1_core_16h/cost/raw_vehicle_grid.csv",
+            "row_number": 374,
+            "runtime_sec": 4.914966620504856
+          },
+          "success": true,
+          "total_pack_cost": 8607.3388765471
+        },
+        "source_row_number": 374
+      },
+      {
+        "candidate": {
+          "x_MPR": 3,
+          "x_R": 4,
+          "x_S": 25,
+          "x_T": 120.0,
+          "x_chem": "LFP"
+        },
+        "design_id": "LFP_T120p0_S25_MPR3_R4",
+        "event_type": "feasible_incumbent_update",
+        "iteration": 5,
+        "optimization_method": "deterministic_exhaustive_grid_search",
+        "result": {
+          "E": 84.0,
+          "L_bat": 1612.8,
+          "P": 239.0,
+          "V": 241.92339725575,
+          "W_bat": 1482.62686826923,
+          "c": 86.8043365718769,
+          "cost": 102.905116295894,
+          "cost_per_kwh": 102.905116295894,
+          "raw": {
+            "condition_name": "cost_84_239_base_long",
+            "design_id": "LFP_T120p0_S25_MPR3_R4",
+            "grid_path": "<jmd-workspace>/outputs_mcp/grid_search/grid3_staged_20260723_190733/stage1_core_16h/cost/raw_vehicle_grid.csv",
+            "row_number": 389,
+            "runtime_sec": 4.916117153130472
+          },
+          "success": true,
+          "total_pack_cost": 8573.07171463806
+        },
+        "source_row_number": 389
+      },
+      {
+        "candidate": {
+          "x_MPR": 3,
+          "x_R": 3,
+          "x_S": 28,
+          "x_T": 120.0,
+          "x_chem": "LFP"
+        },
+        "design_id": "LFP_T120p0_S28_MPR3_R3",
+        "event_type": "feasible_incumbent_update",
+        "iteration": 6,
+        "optimization_method": "deterministic_exhaustive_grid_search",
+        "result": {
+          "E": 84.0,
+          "L_bat": 1796.4,
+          "P": 239.0,
+          "V": 203.21565369483,
+          "W_bat": 1197.74740779333,
+          "c": 103.338495918901,
+          "cost": 101.365281955806,
+          "cost_per_kwh": 101.365281955806,
+          "raw": {
+            "condition_name": "cost_84_239_base_long",
+            "design_id": "LFP_T120p0_S28_MPR3_R3",
+            "grid_path": "<jmd-workspace>/outputs_mcp/grid_search/grid3_staged_20260723_190733/stage1_core_16h/cost/raw_vehicle_grid.csv",
+            "row_number": 473,
+            "runtime_sec": 4.940014149993658
+          },
+          "success": true,
+          "total_pack_cost": 8442.75045734087
+        },
+        "source_row_number": 473
+      },
+      {
+        "candidate": {
+          "x_MPR": 3,
+          "x_R": 4,
+          "x_S": 24,
+          "x_T": 140.0,
+          "x_chem": "LFP"
+        },
+        "design_id": "LFP_T140p0_S24_MPR3_R4",
+        "event_type": "feasible_incumbent_update",
+        "iteration": 7,
+        "optimization_method": "deterministic_exhaustive_grid_search",
+        "result": {
+          "E": 84.0,
+          "L_bat": 1551.6,
+          "P": 239.0,
+          "V": 232.24646136552,
+          "W_bat": 1495.33514030819,
+          "c": 90.4211839290384,
+          "cost": 100.370186518813,
+          "cost_per_kwh": 100.370186518813,
+          "raw": {
+            "condition_name": "cost_84_239_base_long",
+            "design_id": "LFP_T140p0_S24_MPR3_R4",
+            "grid_path": "<jmd-workspace>/outputs_mcp/grid_search/grid3_staged_20260723_190733/stage1_core_16h/cost/raw_vehicle_grid.csv",
+            "row_number": 719,
+            "runtime_sec": 4.882317140698433
+          },
+          "success": true,
+          "total_pack_cost": 8350.56817857929
+        },
+        "source_row_number": 719
+      },
+      {
+        "candidate": {
+          "x_MPR": 3,
+          "x_R": 3,
+          "x_S": 28,
+          "x_T": 140.0,
+          "x_chem": "LFP"
+        },
+        "design_id": "LFP_T140p0_S28_MPR3_R3",
+        "event_type": "feasible_incumbent_update",
+        "iteration": 8,
+        "optimization_method": "deterministic_exhaustive_grid_search",
+        "result": {
+          "E": 84.0,
+          "L_bat": 1796.4,
+          "P": 239.0,
+          "V": 203.21565369483,
+          "W_bat": 1190.38443148678,
+          "c": 103.338495918901,
+          "cost": 99.1192357952622,
+          "cost_per_kwh": 99.1192357952622,
+          "raw": {
+            "condition_name": "cost_84_239_base_long",
+            "design_id": "LFP_T140p0_S28_MPR3_R3",
+            "grid_path": "<jmd-workspace>/outputs_mcp/grid_search/grid3_staged_20260723_190733/stage1_core_16h/cost/raw_vehicle_grid.csv",
+            "row_number": 830,
+            "runtime_sec": 4.877927340567112
+          },
+          "success": true,
+          "total_pack_cost": 8244.772711762
+        },
+        "source_row_number": 830
+      },
+      {
+        "candidate": {
+          "x_MPR": 3,
+          "x_R": 3,
+          "x_S": 28,
+          "x_T": 150.0,
+          "x_chem": "LFP"
+        },
+        "design_id": "LFP_T150p0_S28_MPR3_R3",
+        "event_type": "feasible_incumbent_update",
+        "iteration": 9,
+        "optimization_method": "deterministic_exhaustive_grid_search",
+        "result": {
+          "E": 84.0,
+          "L_bat": 1796.4,
+          "P": 239.0,
+          "V": 203.21565369483,
+          "W_bat": 1187.42155780937,
+          "c": 103.338495918901,
+          "cost": 98.2285760559941,
+          "cost_per_kwh": 98.2285760559941,
+          "raw": {
+            "condition_name": "cost_84_239_base_long",
+            "design_id": "LFP_T150p0_S28_MPR3_R3",
+            "grid_path": "<jmd-workspace>/outputs_mcp/grid_search/grid3_staged_20260723_190733/stage1_core_16h/cost/raw_vehicle_grid.csv",
+            "row_number": 1187,
+            "runtime_sec": 4.944431979209185
+          },
+          "success": true,
+          "total_pack_cost": 8165.28446797159
+        },
+        "source_row_number": 1187
+      },
+      {
+        "candidate": {
+          "x_MPR": 3,
+          "x_R": 3,
+          "x_S": 28,
+          "x_T": 160.0,
+          "x_chem": "LFP"
+        },
+        "design_id": "LFP_T160p0_S28_MPR3_R3",
+        "event_type": "feasible_incumbent_update",
+        "iteration": 10,
+        "optimization_method": "deterministic_exhaustive_grid_search",
+        "result": {
+          "E": 84.0,
+          "L_bat": 1796.4,
+          "P": 239.0,
+          "V": 203.21565369483,
+          "W_bat": 1184.82062898888,
+          "c": 103.338495918901,
+          "cost": 97.4543535605478,
+          "cost_per_kwh": 97.4543535605478,
+          "raw": {
+            "condition_name": "cost_84_239_base_long",
+            "design_id": "LFP_T160p0_S28_MPR3_R3",
+            "grid_path": "<jmd-workspace>/outputs_mcp/grid_search/grid3_staged_20260723_190733/stage1_core_16h/cost/raw_vehicle_grid.csv",
+            "row_number": 1544,
+            "runtime_sec": 5.347799306735396
+          },
+          "success": true,
+          "total_pack_cost": 8095.56670195931
+        },
+        "source_row_number": 1544
+      },
+      {
+        "candidate": {
+          "x_MPR": 2,
+          "x_R": 4,
+          "x_S": 29,
+          "x_T": 150.0,
+          "x_chem": "NMC811"
+        },
+        "design_id": "NMC811_T150p0_S29_MPR2_R4",
+        "event_type": "feasible_incumbent_update",
+        "iteration": 12,
+        "optimization_method": "deterministic_exhaustive_grid_search",
+        "result": {
+          "E": 84.0,
+          "L_bat": 1264.4,
+          "P": 239.0,
+          "V": 201.801471037397,
+          "W_bat": 1398.29916147672,
+          "c": 104.062670564519,
+          "cost": 96.7027590772792,
+          "cost_per_kwh": 96.7027590772792,
+          "raw": {
+            "condition_name": "cost_84_239_base_long",
+            "design_id": "NMC811_T150p0_S29_MPR2_R4",
+            "grid_path": "<jmd-workspace>/outputs_mcp/grid_search/grid3_staged_20260723_190733/stage1_core_16h/cost/raw_vehicle_grid.csv",
+            "row_number": 3476,
+            "runtime_sec": 4.872085343115032
+          },
+          "success": true,
+          "total_pack_cost": 7982.78582989233
+        },
+        "source_row_number": 3476
+      },
+      {
+        "candidate": {
+          "x_MPR": 2,
+          "x_R": 4,
+          "x_S": 29,
+          "x_T": 155.0,
+          "x_chem": "NMC811"
+        },
+        "design_id": "NMC811_T155p0_S29_MPR2_R4",
+        "event_type": "feasible_incumbent_update",
+        "iteration": 13,
+        "optimization_method": "deterministic_exhaustive_grid_search",
+        "result": {
+          "E": 84.0,
+          "L_bat": 1264.4,
+          "P": 239.0,
+          "V": 201.801471037397,
+          "W_bat": 1397.12168023839,
+          "c": 104.062670564519,
+          "cost": 96.5230814354139,
+          "cost_per_kwh": 96.5230814354139,
+          "raw": {
+            "condition_name": "cost_84_239_base_long",
+            "design_id": "NMC811_T155p0_S29_MPR2_R4",
+            "grid_path": "<jmd-workspace>/outputs_mcp/grid_search/grid3_staged_20260723_190733/stage1_core_16h/cost/raw_vehicle_grid.csv",
+            "row_number": 3872,
+            "runtime_sec": 4.943174415268004
+          },
+          "success": true,
+          "total_pack_cost": 7963.46405293641
+        },
+        "source_row_number": 3872
+      }
+    ],
+    "structured_condition_changes": [
+      {
+        "changed": 25.75,
+        "description": "NMC811 CAM cost increases from 19.63 to 25.75.",
+        "direction": "increases",
+        "field": "cam_cost_nmc811",
+        "previous": 19.63
+      }
+    ],
+    "variable_bounds": {
+      "x_MPR": {
+        "lower": 1,
+        "type": "integer",
+        "upper": 50
+      },
+      "x_R": {
+        "lower": 1,
+        "type": "integer",
+        "upper": 4
+      },
+      "x_S": {
+        "lower": 1,
+        "type": "integer",
+        "upper": 30
+      },
+      "x_T": {
+        "bounds_by_chemistry": {
+          "LFP": {
+            "lower": 50.0,
+            "upper": 165.0
+          },
+          "NMC811": {
+            "lower": 50.0,
+            "upper": 155.0
+          }
+        },
+        "type": "real"
+      },
+      "x_chem": {
+        "choices": [
+          "LFP",
+          "NMC811"
+        ],
+        "type": "categorical"
+      }
+    }
+  },
+  "schema_version": "llm_methods.redesign_context.v1"
+}

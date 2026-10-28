@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "WAFER: code for 'LLM-Assisted Optimization for Simulation-Based Redesign'"
+type: software
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/Chani-song/WAFER"
+authors:
+  - family-names: Song
+    given-names: Chan-Eui
+    affiliation: "Carnegie Mellon University"
+    email: chaneuis@andrew.cmu.edu
+  - family-names: Michalek
+    given-names: Jeremy J.
+    affiliation: "Carnegie Mellon University"
+    email: jmichalek@cmu.edu
+  - family-names: McComb
+    given-names: Christopher
+    affiliation: "Carnegie Mellon University"
+    email: ccm@cmu.edu
+preferred-citation:
+  type: article
+  title: "LLM-Assisted Optimization for Simulation-Based Redesign"
+  authors:
+    - family-names: Song
+      given-names: Chan-Eui
+    - family-names: Michalek
+      given-names: Jeremy J.
+    - family-names: McComb
+      given-names: Christopher
+  journal: "Journal of Mechanical Design"
+  publisher:
+    name: "ASME"
+  status: submitted
+  year: 2026
+  notes: "Submitted to the ASME Journal of Mechanical Design (2026)."
+references:
+  - type: report
+    title: "Battery Performance and Cost Modeling for Electric-Drive Vehicles: A Manual for BatPaC v5.0"
+    authors:
+      - family-names: Knehr
+        given-names: Kevin W.
+      - family-names: Kubal
+        given-names: Joseph J.
+      - family-names: Nelson
+        given-names: Paul A.
+      - family-names: Ahmed
+        given-names: Shabbir
+    institution:
+      name: "Argonne National Laboratory"
+    number: "ANL/CSE-22/1"
+    year: 2022
+    month: 7
+    doi: "10.2172/1877590"
+    notes: "BatPaC is developed by Argonne National Laboratory and distributed under a BSD license. The BatPaC workbook is not included in this repository."

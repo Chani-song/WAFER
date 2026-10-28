@@ -1,0 +1,72 @@
+You are being evaluated only for comprehension and application of the engineering information supplied above.
+
+Do NOT optimize the design.
+Do NOT invent BatPaC outputs.
+Do NOT use outside engineering knowledge unless explicitly labeled as outside inference.
+
+Answer every item separately.
+
+SECTION A — EXACT RELATIONSHIP COMPREHENSION
+
+1. Write the supplied energy relationship exactly in symbolic form.
+Define E, V, and C.
+
+2. Write the supplied simplified positive-electrode capacity relationship exactly in symbolic form.
+Define Q, rho, epsilon_active, A_pos, and delta_pos.
+
+3. Holding all other quantities fixed, according to the supplied relationship, what happens to cell capacity if positive-electrode thickness increases?
+
+4. Write the supplied power, voltage-loss, and power-loss relationships.
+At fixed required power, if pack voltage increases, what happens to current?
+What happens to resistive voltage and power losses if resistance is held fixed?
+
+5. Reproduce the supplied compact I_power–ASI relationship exactly.
+Holding U and V/U fixed, if ASI increases, does the relationship predict that I_power increases or decreases?
+Do not use outside knowledge; answer only from the supplied expression.
+
+6. Explain the supplied cathode-thickness trade-off.
+Is a thicker cathode guaranteed to improve or worsen the final design?
+Explain why the context does or does not permit a monotonic conclusion.
+
+7. According to the supplied fast-charge information, what happens to the candidate-specific maximum positive-electrode thickness when requested charging time becomes shorter?
+Can its numerical value be known before BatPaC evaluation?
+
+8. What is the primary effect of increasing cells connected in series?
+What is the primary effect of increasing cells connected in parallel?
+
+9. Can the sign of the change in pack length or width caused by changing x_MPR or x_R be predicted monotonically from the supplied reference?
+Explain.
+
+10. Can a chemistry-specific cathode-material price increase, by itself, make an otherwise unchanged design physically infeasible?
+Explain using only the supplied context.
+
+11. Can the chemistry label alone establish which chemistry has superior power or fast-charge capability?
+Explain using only the supplied context.
+
+SECTION B — APPLICATION TO THE ACTUAL REDESIGN SCENARIO
+
+12. Considering ONLY the five actual optimization variables
+{x_chem, x_T, x_S, x_MPR, x_R},
+identify which variables are mechanistically relevant to the redesign scenario above.
+
+For each variable you identify:
+(a) state the supplied engineering relationship that makes it relevant;
+(b) state whether the relationship predicts a definite direction of change or only suggests that the variable should be reconsidered.
+
+Do not introduce variables outside this five-variable optimization space.
+
+13. Identify any variable among
+{x_chem, x_T, x_S, x_MPR, x_R}
+whose effect cannot be predicted confidently without BatPaC evaluation.
+Explain why.
+
+14. List every quantity that the supplied context explicitly says must NOT be asserted for an unevaluated candidate.
+
+SECTION C — SELF-AUDIT
+
+15. Identify any equation, relationship, or scenario implication above that you are not confident you interpreted correctly.
+
+16. Separate your conclusions into:
+- Explicitly supported by the supplied prompt
+- Reasonable but non-guaranteed inference
+- Not knowable without BatPaC evaluation

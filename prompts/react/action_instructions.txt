@@ -1,0 +1,8 @@
+Return exactly one evaluate_candidate action.
+action must be the JSON string 'evaluate_candidate'.
+candidate must be a sibling top-level object containing exactly x_chem, x_T, x_S, x_MPR, and x_R.
+Use the supplied trajectory and observations directly; the controller handles all observation bookkeeping.
+Do not emit observations_used.
+Do not emit finish or final_candidate.
+Do not repeat an already evaluated candidate.
+The output_schema is authoritative.

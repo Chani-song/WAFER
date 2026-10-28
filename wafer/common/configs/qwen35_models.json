@@ -1,0 +1,17 @@
+{
+  "qwen35_4b": {
+    "model_id": "Qwen/Qwen3.5-4B",
+    "local_dir": "models/qwen35/Qwen3.5-4B",
+    "tier": "4B"
+  },
+  "qwen35_9b": {
+    "model_id": "Qwen/Qwen3.5-9B",
+    "local_dir": "models/qwen35/Qwen3.5-9B",
+    "tier": "9B"
+  },
+  "qwen35_27b": {
+    "model_id": "models/qwen35/Qwen3.5-27B",
+    "local_dir": "models/qwen35/Qwen3.5-27B",
+    "tier": "27B"
+  }
+}

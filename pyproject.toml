@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wafer"
+version = "1.0.0"
+description = "WAFER: LLM-assisted warm starting, variable fixing and ReAct for battery-pack redesign (code for the ASME JMD paper)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+
+[tool.setuptools]
+packages = ["wafer"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+wafer = ["common/**/*", "roles/**/*", "contexts/*.json", "orchestration/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,54 @@
+{
+  "type": "json_schema",
+  "json_schema": {
+    "name": "ReActAction",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "thought",
+        "action",
+        "candidate"
+      ],
+      "properties": {
+        "thought": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        },
+        "action": {
+          "const": "evaluate_candidate"
+        },
+        "candidate": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "x_chem",
+            "x_T",
+            "x_S",
+            "x_MPR",
+            "x_R"
+          ],
+          "properties": {
+            "x_chem": {
+              "type": "string"
+            },
+            "x_T": {
+              "type": "number"
+            },
+            "x_S": {
+              "type": "integer"
+            },
+            "x_MPR": {
+              "type": "integer"
+            },
+            "x_R": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "strict": true
+  }
+}

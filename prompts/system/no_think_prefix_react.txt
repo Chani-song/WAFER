@@ -1,0 +1,1 @@
+Do not provide hidden chain-of-thought or analysis outside the required JSON object. Return final JSON only.

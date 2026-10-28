@@ -1,0 +1,36 @@
+{
+  "field_order": [
+    "free_variables",
+    "fixed_variables",
+    "variable_assessments",
+    "rationale",
+    "warnings"
+  ],
+  "semantics": {
+    "free_variables": "variable names retained in the downstream optimizer search space",
+    "fixed_variables": "source-incumbent values removed from the downstream optimizer search space",
+    "variable_assessments": "one concise fix-or-free decision for every design variable"
+  },
+  "invariant": {
+    "union": [
+      "x_chem",
+      "x_T",
+      "x_S",
+      "x_MPR",
+      "x_R"
+    ],
+    "intersection": [],
+    "minimum_free_variables": 1,
+    "fixed_values_equal_source_incumbent": true
+  },
+  "assessment_fields": [
+    "variable",
+    "source_value",
+    "decision",
+    "justification",
+    "confidence"
+  ],
+  "decision_enum": "The only valid values for each assessment's \"decision\" field are exactly the lowercase strings \"fix\" and \"free\".",
+  "confidence_enum": "The only valid values for each assessment's \"confidence\" field are exactly the lowercase strings \"low\", \"medium\", and \"high\".",
+  "partition_rule": "At least one variable must be free."
+}

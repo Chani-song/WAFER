@@ -1,0 +1,12 @@
+TARGET REDESIGN SCENARIO:
+
+- Maximum allowable pack width decreases from 1500 mm to 1100 mm.
+- Other source requirements remain unchanged.
+
+ACTUAL OPTIMIZATION VARIABLES:
+
+x_chem = cathode chemistry {LFP, NMC811}
+x_T    = positive-electrode thickness
+x_S    = series-cell/topology variable
+x_MPR  = modules per row
+x_R    = number of module rows
